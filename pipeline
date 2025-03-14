@@ -1,0 +1,28 @@
+pipeline {
+    agent any
+    stages {
+        stage('Repository from git') {
+            steps {
+                echo 'pulled data from Repository'
+				git branch: 'main', url: 'https://github.com/Keeryar/mindcircuit15d.git'
+            }
+		}
+		
+		stage('pull data using maven') {
+            steps {
+                echo 'pulled data using maven'
+				sh 'mvn clean install'
+            }
+		}
+			
+		stage('Deploying to tomcat') {
+            steps {
+                echo 'Deployed to tomcat'
+				deploy adapters: [tomcat9(credentialsId: 'tomcatID', path: '', url: 'http://ec2-34-227-197-9.compute-1.amazonaws.com:8081/')], contextPath: 'pipe-facebook', war: '**/*.war'
+            }
+        }
+		
+		
+    }
+	
+}
