@@ -5,7 +5,7 @@
 
     <groupId>com.example</groupId>
     <artifactId>mindcircuitbatch15d</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
 	<properties>
@@ -17,12 +17,12 @@
 	<distributionManagement>
 		 <snapshotRepository>
 		    <id>NexusRepo</id>
-		    <url>http://ec2-44-202-247-118.compute-1.amazonaws.com:8081/repository/batch14-repo-snapshots/</url>
+		    <url>http://3.87.116.154:8081/repository/keer-repo-snapshot/</url>
 		 </snapshotRepository>
 		
 		<repository>
 		    <id>NexusRepo</id>
-		    <url>http://ec2-44-202-247-118.compute-1.amazonaws.com:8081/repository/batch14-repo-release/</url>
+		    <url>http://3.87.116.154:8081/repository/keer-repo-release/</url>
 		</repository>
   	</distributionManagement>
 
