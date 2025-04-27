@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
         - name: fbcont1
-          image: keerthidocker11/practice:multistage_tomcat
+          image: keerthidocker11/practice:8
           ports:
             - containerPort: 8080
       
